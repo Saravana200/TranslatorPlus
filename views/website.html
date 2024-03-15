@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Translation Service</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      textarea {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: none;
+      }
+
+      button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+
+      .translated-text-area {
+        width: 100%;
+        height: 200px;
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: none;
+      }
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Professional Translation Service</h1>
+    </header>
+
+    <div class="container">
+      <form id="translationForm" method="post" action="/translate">
+        <select id="translationDirection" name="translationDirection">
+          <option value="fr_to_en">French to English</option>
+          <option value="es_to_en">Spanish to English</option>
+          <option value="nl_to_en">Dutch to English</option>
+          <option value="en_to_fr">English to French</option>
+          <option value="en_to_es">English to Spanish</option>
+          <option value="en_to_nl">English to Dutch</option>
+        </select>
+        <textarea
+          id="textInput"
+          name="textToTranslate"
+          placeholder="Enter text to translate..."
+          spellcheck="false"
+        >
+{{ original_text }}</textarea
+        >
+        <button type="submit">Translate</button>
+      </form>
+      <br />
+      <textarea class="translated_text" readonly>
+{{ translated_text }}</textarea
+      >
+    </div>
+  </body>
+</html>
